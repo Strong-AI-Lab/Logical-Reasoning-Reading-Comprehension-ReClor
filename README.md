@@ -11,3 +11,5 @@ We also finetune a RoBERTa-large-mnli by ourselves. The finetuning code is in th
 
 The files under the MNLI can be downloaded from here, which are organized from the original MNLI website.
 https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sharing
+
+MNLI Project page: https://www.nyu.edu/projects/bowman/multinli/
