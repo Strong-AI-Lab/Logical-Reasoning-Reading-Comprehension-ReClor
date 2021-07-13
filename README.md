@@ -13,3 +13,10 @@ The files under the MNLI can be downloaded from here, which are organized from t
 https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sharing
 
 **[MNLI Project page]** https://www.nyu.edu/projects/bowman/multinli/
+
+##  How to run the code?
+Our **#6** submission code is the `run_roberta_large_mnli.sh` which located in the `scripts` folder. You can run it directly.
+
+Before you run the code, you need to download the MNLI folder from the Google drive link and put it under the MNLI folder.
+
+If you want to finetune a RoBERTa-large-mnli by yourself, you can try to run the `finetune.py`.
