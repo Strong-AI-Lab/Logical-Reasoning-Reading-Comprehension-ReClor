@@ -22,3 +22,14 @@ https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sha
 1. Before you run the code, you need to download the MNLI folder from the Google drive link and put it under the MNLI folder and `pip install -r requirements.txt` to install all needed packages.
 
 2. Then you can run the `finetune.py`.
+
+## Built With
+
+ - [Torch](https://pytorch.org/) - library used to train and run models
+ - [Transformers](https://huggingface.co/transformers/) - Huggingface library used to implement models
+ - [Sklearn](https://scikit-learn.org/stable/) - library used to implement and evaluate models
+ - [Matplotlib](https://matplotlib.org/) - main plotting library
+ - [Seaborn](https://seaborn.pydata.org/) - helper plotting library for some charts
+ - [NumPy](http://www.numpy.org/) - main numerical library for data vectorisation
+ - [Pandas](https://pandas.pydata.org/) - helper data manipulation library
+ - [Jsonlines](https://pypi.org/project/jsonlines/) - helper jsonl data manipulation library
