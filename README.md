@@ -19,4 +19,4 @@ https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sha
 
 2. Our **#6** submission code is the `run_roberta_large_mnli.sh` which located in the `scripts` folder. You can run it directly.
 
-3. If you want to finetune a RoBERTa-large-mnli by yourself, you can try to run the `finetune.py`.
+3. If you want to finetune a `RoBERTa-large-mnli` by yourself, you can try to run the `finetune.py`.
