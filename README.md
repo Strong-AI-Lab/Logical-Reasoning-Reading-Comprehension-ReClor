@@ -8,3 +8,6 @@ Here is the link for the ReClor leaderboard. We are the team `qbao775`. The meth
 **[ReClor Leaderboard]** https://eval.ai/web/challenges/challenge-page/503/leaderboard/1347
 
 We also finetune a RoBERTa-large-mnli by ourselves. The finetuning code is in the `finetune.py`.
+
+The files under the MNLI can be downloaded from here, which are organized from the original MNLI website.
+https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sharing
