@@ -1,0 +1,8 @@
+pandas
+sklearn
+torch
+numpy
+matplotlib
+seaborn
+transformers
+jsonlines
