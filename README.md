@@ -19,6 +19,6 @@ https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sha
 1. Our **#6** submission code is the `run_roberta_large_mnli.sh` which located in the `scripts` folder. You can run it directly.
 
 ### Finetune a RoBERTa-large-mnli by yourself
-1. Before you run the code, you need to download the MNLI folder from the Google drive link and put it under the MNLI folder.
+1. Before you run the code, you need to download the MNLI folder from the Google drive link and put it under the MNLI folder and `pip install -r requirements.txt` to install all needed packages.
 
 2. Then you can run the `finetune.py`.
