@@ -1,5 +1,5 @@
 # Logical-Reasoning-Reading-Comprehension-ReClor
-Here is the code for the **#6** to the ReClor Logical Reasoning Reading Comprehension leaderboard. 
+Here is the code for the **#6** to the ReClor Logical Reasoning Reading Comprehension Leaderboard. 
 
 ![image](https://user-images.githubusercontent.com/23516191/125377937-f4415080-e3e1-11eb-897d-48350be6792f.png)
 
