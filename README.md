@@ -15,8 +15,10 @@ https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sha
 **[MNLI Project page]** https://www.nyu.edu/projects/bowman/multinli/
 
 ##  How to run the code?
+### Load existing RoBERTa-large-mnli from Huggingface
+1. Our **#6** submission code is the `run_roberta_large_mnli.sh` which located in the `scripts` folder. You can run it directly.
+
+### Finetune a RoBERTa-large-mnli by yourself
 1. Before you run the code, you need to download the MNLI folder from the Google drive link and put it under the MNLI folder.
 
-2. Our **#6** submission code is the `run_roberta_large_mnli.sh` which located in the `scripts` folder. You can run it directly.
-
-3. If you want to finetune a `RoBERTa-large-mnli` by yourself, you can try to run the `finetune.py`.
+2. Then you can run the `finetune.py`.
