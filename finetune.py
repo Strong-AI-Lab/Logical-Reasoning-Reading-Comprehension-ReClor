@@ -32,6 +32,7 @@ batch_size = 16  # for DataLoader (when fine-tuning BERT on a specific task, 16 
 epochs = 10  # Number of training epochs (we recommend between 2 and 4)
 lr = 1e-5  # Optimizer parameters: learning_rate - default is 5e-5, our notebook had 2e-5
 eps = 1e-8  # Optimizer parameters: adam_epsilon  - default is 1e-8.
+num = 3 # the parameter to the num_labels
 
 seed_val = 2021  # Set the seed value all over the place to make this reproducible.
 saved_model_dir = "./checkpoints/roberta_large_mnli_local/"  # save model after fine-tune
@@ -240,7 +241,7 @@ if __name__=="__main__":
     # https://discuss.huggingface.co/t/which-loss-function-in-AutoModelForSequenceClassification-regression/1432/2
     model = AutoModelForSequenceClassification.from_pretrained(
         pretrained_model,
-        num_labels=3,                   # The number of output labels -- 1 for MSE Loss Regression.
+        num_labels=num,                   # The number of output labels -- 1 for MSE Loss Regression.
         output_attentions=False,        # Whether the model returns attentions weights.
         output_hidden_states=False,     # Whether the model returns all hidden-states.
     )
@@ -414,32 +415,25 @@ if __name__=="__main__":
             logits = outputs[0]
 
             # Move logits and labels to CPU
-            logits = logits.detach().cpu().numpy()
-            label_ids = b_labels.to('cpu').numpy()
+            logits = logits.detach().cpu()
+            label_ids = b_labels.to('cpu')
 
-            x = b_labels.to('cpu').numpy().copy()
-            i=0
-            for p in logits:
-                if p[0] >= p[1] and p[0] >= p[2]:
-                    x[i] = 0
-                elif p[1] >= p[0] and p[1] >= p[2]:
-                    x[i] = 1
-                elif p[2] >= p[0] and p[2] >= p[1]:
-                    x[i] = 2
-                i=i+1
-
-            # Calculate the mse for this batch of test sentences.
-            # flat_mse(y_pred, y_true)
-            tmp_eval_mse = mean_squared_error(label_ids, x)
-            #tmp_eval_mse = flat_mse(logits, label_ids)
+            if num > 1:
+                loss_func = torch.nn.CrossEntropyLoss()
+            else:
+                logits = logits.numpy()
+                label_ids = label_ids.numpy()
+                # Calculate the mse for this batch of test sentences.
+                loss_func = mean_squared_error()
+            loss = loss_func(logits, label_ids)
 
             # Accumulate the total mse.
-            eval_mse += tmp_eval_mse
+            eval_loss += loss
 
             # Track the number of batches
             nb_eval_steps += 1
 
-        average_val_loss = eval_mse / len(validation_dataloader)
+        average_val_loss = eval_loss / len(validation_dataloader)
 
         eval_loss_values.append(average_val_loss)
         # Report the final accuracy for this validation run.
