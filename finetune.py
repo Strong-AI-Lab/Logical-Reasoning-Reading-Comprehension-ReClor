@@ -420,12 +420,12 @@ if __name__=="__main__":
 
             if num > 1:
                 loss_func = torch.nn.CrossEntropyLoss()
+                loss = loss_func(logits, label_ids)
             else:
                 logits = logits.numpy()
                 label_ids = label_ids.numpy()
                 # Calculate the mse for this batch of test sentences.
-                loss_func = mean_squared_error()
-            loss = loss_func(logits, label_ids)
+                loss = mean_squared_error(logits, label_ids)
 
             # Accumulate the total mse.
             eval_loss += loss
