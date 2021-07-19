@@ -35,5 +35,5 @@ https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sha
  - [Jsonlines](https://pypi.org/project/jsonlines/) - helper jsonl data manipulation library
 
 ## Acknowledgement
-Thanks for the source code from the ReClor group.
+Thanks for the benchmark source code provided from the ReClor group.
 https://github.com/yuweihao/reclor
