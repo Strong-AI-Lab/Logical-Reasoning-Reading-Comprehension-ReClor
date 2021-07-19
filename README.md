@@ -33,3 +33,7 @@ https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sha
  - [NumPy](http://www.numpy.org/) - main numerical library for data vectorisation
  - [Pandas](https://pandas.pydata.org/) - helper data manipulation library
  - [Jsonlines](https://pypi.org/project/jsonlines/) - helper jsonl data manipulation library
+
+## Acknowledgement
+Thanks for the source code from the ReClor group.
+https://github.com/yuweihao/reclor
