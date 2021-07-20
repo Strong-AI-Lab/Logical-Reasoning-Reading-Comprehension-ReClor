@@ -5,14 +5,14 @@ Here is the code for the **#6** to the ReClor Logical Reasoning Reading Comprehe
 
 Here is the link for the ReClor leaderboard. We are the team `qbao775`. The method we used is `RoBERTa-large` finetuned on `MNLI` dataset. In the first submission, we use the (RoBERTa-large-mnli] (https://huggingface.co/roberta-large-mnli) from the Huggingface. 
 
-**[ReClor Leaderboard]**(https://eval.ai/web/challenges/challenge-page/503/leaderboard/1347)
+**[ReClor Leaderboard](https://eval.ai/web/challenges/challenge-page/503/leaderboard/1347)**
 
 We also finetune a RoBERTa-large-mnli by ourselves. The finetuning code is in the `finetune.py`.
 
 The files under the MNLI can be downloaded from here, which are organized from the original MNLI website.
 https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sharing
 
-**[MNLI Project page]**(https://www.nyu.edu/projects/bowman/multinli/)
+**[MNLI Project page](https://www.nyu.edu/projects/bowman/multinli/)**
 
 ##  How to run the code?
 ### Environment setup
