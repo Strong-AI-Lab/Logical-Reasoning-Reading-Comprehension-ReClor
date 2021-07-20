@@ -15,8 +15,17 @@ https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sha
 **[MNLI Project page]** https://www.nyu.edu/projects/bowman/multinli/
 
 ##  How to run the code?
+### Environment setup
+- [Python3.5+]
+- [PyTorch 1.0+]
+- [Transformers 2.3.0]
+- [apex] (https://github.com/NVIDIA/apex) - install Nvidia apex for mixed precision training
+Install Python3.5+, PyTorch 1.0+, Transformers and apex
+
 ### Load existing RoBERTa-large-mnli from Huggingface
-1. Our **#6** submission code is the `run_roberta_large_mnli.sh` which located in the `scripts` folder. You can run it directly.
+Our **#6** submission code is the `run_roberta_large_mnli.sh` which located in the `scripts` folder. You can run it directly.
+1. Run the scripts in the main directory by such as `sh scripts/run_roberta_large.sh`
+2. You will find `test_preds.npy` which is the test prediction result. You need to submit it to the ReClor leaderboard(https://evalai.cloudcv.org/web/challenges/challenge-page/503/leaderboard/1347).
 
 ### Finetune a RoBERTa-large-mnli by yourself
 1. Before you run the code, you need to download the MNLI folder from the Google drive link and put it under the MNLI folder and `pip install -r requirements.txt` to install all needed packages.
@@ -33,6 +42,7 @@ https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sha
  - [NumPy](http://www.numpy.org/) - main numerical library for data vectorisation
  - [Pandas](https://pandas.pydata.org/) - helper data manipulation library
  - [Jsonlines](https://pypi.org/project/jsonlines/) - helper jsonl data manipulation library
+ - [Apex] (https://github.com/NVIDIA/apex/) - install Nvidia apex for mixed precision training
 
 ## Acknowledgement
 Thanks for the benchmark source code provided from the ReClor group.
