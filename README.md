@@ -16,9 +16,9 @@ https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sha
 
 ##  How to run the code?
 ### Environment setup
-- [Python3.5+]
-- [PyTorch 1.0+]
-- [Transformers 2.3.0]
+- Python3.5+
+- PyTorch 1.0+
+- Transformers 2.3.0
 - [apex](https://github.com/NVIDIA/apex) - install Nvidia apex for mixed precision training
 Install Python3.5+, PyTorch 1.0+, Transformers and apex
 
