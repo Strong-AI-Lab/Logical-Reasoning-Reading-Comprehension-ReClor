@@ -35,7 +35,7 @@ Our **#6** submission code (before 2021/07/28) is the `run_roberta_large_mnli.sh
 1. Run the scripts in the main directory by such as `sh scripts/run_roberta_large.sh`
 2. You will find `test_preds.npy` which is the test prediction result. You need to submit it to the [ReClor leaderboard](https://evalai.cloudcv.org/web/challenges/challenge-page/503/leaderboard/1347).
 
-The submitted test predication results `test_preds.npy` and models can be found from [here](https://drive.google.com/drive/folders/1krlBEyBMsHGKa8i-HVCMR1l3RT4c4Ne_?usp=sharing).
+The test predication results `test_preds.npy` submitted to the leaderboard and models can be found from [here](https://drive.google.com/drive/folders/1krlBEyBMsHGKa8i-HVCMR1l3RT4c4Ne_?usp=sharing).
 
 ### Finetune a RoBERTa-large-mnli by yourself
 1. Before you run the code, you need to download the MNLI folder from the Google drive link and put it under the MNLI folder and `pip install -r requirements.txt` to install all needed packages.
