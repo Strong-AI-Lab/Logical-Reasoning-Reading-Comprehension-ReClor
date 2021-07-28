@@ -13,8 +13,7 @@ Here is the link for the ReClor leaderboard. We are the team `qbao775`. The meth
 
 We also finetune a RoBERTa-large-mnli by ourselves. The finetuning code is in the `finetune.py`.
 
-The files under the MNLI can be downloaded from here, which are organized from the original MNLI website.
-https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sharing
+The files under the MNLI can be downloaded from [here](https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sharing), which are organized from the original MNLI website.
 
 **[MNLI Project page](https://www.nyu.edu/projects/bowman/multinli/)**
 
