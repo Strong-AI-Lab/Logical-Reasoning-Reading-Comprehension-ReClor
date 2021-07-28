@@ -337,6 +337,57 @@ class ReclorProcessor(DataProcessor):
                 )  
         return examples
 
+class PararuleProcessor(DataProcessor):
+    """Processor for the Pararule and Pararule Plus data set."""
+
+    def get_train_examples(self, data_dir):
+        """See base class."""
+        logger.info("LOOKING AT {} train".format(data_dir))
+        return self._create_examples(self._read_json(os.path.join(data_dir, "train.json")), "train")
+
+    def get_dev_examples(self, data_dir):
+        """See base class."""
+        logger.info("LOOKING AT {} dev".format(data_dir))
+        return self._create_examples(self._read_json(os.path.join(data_dir, "val.json")), "dev")
+
+    def get_test_examples(self, data_dir):
+        logger.info("LOOKING AT {} test".format(data_dir))
+        return self._create_examples(self._read_json(os.path.join(data_dir, "test.json")), "test")
+
+    def get_labels(self):
+        """See base class."""
+        return [0, 1]
+
+    def _read_json(self, input_file):
+        with open(input_file, "r") as f:
+            lines = json.load(f)
+        return lines
+
+    def _create_examples(self, lines, type):
+        """Creates examples for the training and dev sets."""
+        examples = []
+        for d in lines:
+            context = d['context']
+            for q in d['questions']:
+                question = q['text']
+                #answers = d['answers']
+                #label = q['label'] # for test set, there is no label. Just use 0 for convenience.
+                if q['label'] == "true":
+                    label = 1
+                elif q['label'] == "false":
+                    label = 0
+                id_string = q['id']
+                examples.append(
+                    InputExample(
+                        example_id = id_string,
+                        question = question,
+                        contexts=[context,context],  # this is not efficient but convenient
+                        #endings=[answers[0], answers[1], answers[2], answers[3]],
+                        endings=["false","true"],
+                        label = label
+                        )
+                    )
+        return examples
 
 def convert_examples_to_features(
     examples: List[InputExample],
@@ -414,7 +465,7 @@ def convert_examples_to_features(
     return features
 
 
-processors = {"race": RaceProcessor, "swag": SwagProcessor, "arc": ArcProcessor, "reclor": ReclorProcessor}
+processors = {"race": RaceProcessor, "swag": SwagProcessor, "arc": ArcProcessor, "reclor": ReclorProcessor, "pararule": PararuleProcessor}
 
 
-MULTIPLE_CHOICE_TASKS_NUM_LABELS = {"race": 4, "swag": 4, "arc": 4, "reclor": 4}
+MULTIPLE_CHOICE_TASKS_NUM_LABELS = {"race": 4, "swag": 4, "arc": 4, "reclor": 4, "pararule": 2}
