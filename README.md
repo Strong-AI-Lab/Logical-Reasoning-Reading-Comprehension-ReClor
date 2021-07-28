@@ -1,9 +1,9 @@
 # Logical-Reasoning-Reading-Comprehension-ReClor
-Here is the code for the **#5** to the ReClor Logical Reasoning Reading Comprehension Leaderboard (2021/07/28). 
+Here is the code for the **#5** to the ReClor Logical Reasoning Reading Comprehension Leaderboard (**2021/07/28**). 
 
 ![image](https://user-images.githubusercontent.com/23516191/127267725-54938a0c-c3d9-41ae-a9a5-77095b11e523.png)
 
-Here is the code for the **#6** to the ReClor Logical Reasoning Reading Comprehension Leaderboard (2021/07/27). 
+Here is the code for the **#6** to the ReClor Logical Reasoning Reading Comprehension Leaderboard (**2021/07/27**). 
 
 ![image](https://user-images.githubusercontent.com/23516191/125377937-f4415080-e3e1-11eb-897d-48350be6792f.png)
 
