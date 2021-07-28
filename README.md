@@ -57,4 +57,5 @@ Our **#6** submission code (before 2021/07/28) is the `run_roberta_large_mnli.sh
 Thanks for the benchmark source code provided from the ReClor group.
 https://github.com/yuweihao/reclor
 
-
+PARARULE Plus: A Larger Deep Multi-Step Reasoning Dataset over Natural Language
+https://github.com/Strong-AI-Lab/PARARULE-Plus
