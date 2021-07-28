@@ -27,7 +27,10 @@ https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sha
 Install Python3.5+, PyTorch 1.0+, Transformers and apex
 
 ### Load existing RoBERTa-large-mnli from Huggingface
-Our **#5** submission code (2021/07/28) 
+Our **#5** submission code (2021/07/28) is the `run_roberta_large_MNLI_PARARULE_Plus_reclor.sh` which located in the `scripts` folder. You can run it directly.
+1. Before you run the scripts in the main directory by such as `run_roberta_large_MNLI_PARARULE_Plus_reclor.sh`, please run the `run_roberta_large_MNLI_PARARULE_Plus.sh` firstly and then use the lastest output model as the initialization model for the `run_roberta_large_MNLI_PARARULE_Plus_reclor.sh`.
+2. Run the scripts in the main directory by such as `sh scripts/run_roberta_large_MNLI_PARARULE_Plus_reclor.sh`
+3. You will find `test_preds.npy` which is the test prediction result. You need to submit it to the [ReClor leaderboard](https://evalai.cloudcv.org/web/challenges/challenge-page/503/leaderboard/1347).
 
 Our **#6** submission code (before 2021/07/28) is the `run_roberta_large_mnli.sh` which located in the `scripts` folder. You can run it directly.
 1. Run the scripts in the main directory by such as `sh scripts/run_roberta_large.sh`
