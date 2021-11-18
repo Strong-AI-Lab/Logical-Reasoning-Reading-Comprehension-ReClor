@@ -11,7 +11,7 @@ Here is the link for the ReClor leaderboard. We are the team `qbao775`. The meth
 
 **[ReClor Leaderboard](https://eval.ai/web/challenges/challenge-page/503/leaderboard/1347)**
 
-We also finetune a RoBERTa-large-mnli by ourselves. The finetuning code and hyperparameters are referred from the Huggingface (https://github.com/huggingface/transformers/tree/master/examples/pytorch/text-classification).
+We also finetune a RoBERTa-large-mnli by ourselves. The finetuning code and hyperparameters are referred from the Huggingface (https://github.com/huggingface/transformers/tree/master/examples/pytorch/text-classification). You need to clone the transformers code (https://github.com/huggingface/transformers) firstly.
 
 The files under the MNLI can be downloaded from [here](https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sharing), which are organized from the original MNLI website.
 
@@ -38,9 +38,25 @@ Our **#6** submission code (before 2021/07/28) is the `run_roberta_large_mnli.sh
 The test predication results `test_preds.npy` submitted to the leaderboard and models can be found from [here](https://drive.google.com/drive/folders/1krlBEyBMsHGKa8i-HVCMR1l3RT4c4Ne_?usp=sharing).
 
 ### Finetune a RoBERTa-large-mnli by yourself
-1. Before you run the code, you need to download the MNLI folder from the Google drive link and put it under the MNLI folder and `pip install -r requirements.txt` to install all needed packages.
+1. clone the transformers code from the link (https://github.com/huggingface/transformers).
 
-2. Then you can run the `finetune.py`.
+2. `cd transformers` and then `pip install -e .`
+
+3. `cd ./examples/pytorch/text-classification/` and then run the script as the `README.md` shown.
+```
+export TASK_NAME=mnli
+
+python run_glue.py \
+  --model_name_or_path roberta-large \
+  --task_name $TASK_NAME \
+  --do_train \
+  --do_eval \
+  --max_seq_length 128 \
+  --per_device_train_batch_size 32 \
+  --learning_rate 2e-5 \
+  --num_train_epochs 3 \
+  --output_dir /tmp/$TASK_NAME/
+```
 
 ## Built With
 
