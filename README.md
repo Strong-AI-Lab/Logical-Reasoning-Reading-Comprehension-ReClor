@@ -36,7 +36,7 @@ Our **#6** submission code (before 2021/07/28) is the `run_roberta_large_mnli.sh
 The test predication results `test_preds.npy` submitted to the leaderboard and models can be found from [here](https://drive.google.com/drive/folders/1krlBEyBMsHGKa8i-HVCMR1l3RT4c4Ne_?usp=sharing).
 
 ### Finetune a RoBERTa-large-mnli by yourself
-1. clone the transformers code from the link (https://github.com/huggingface/transformers).
+1. git clone the transformers code `git clone https://github.com/huggingface/transformers.git` from the link (https://github.com/huggingface/transformers).
 
 2. `cd transformers` and then `pip install -e .`
 
