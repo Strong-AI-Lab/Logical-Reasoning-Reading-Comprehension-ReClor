@@ -11,7 +11,7 @@ Here is the link for the ReClor leaderboard. We are the team `qbao775`. The meth
 
 **[ReClor Leaderboard](https://eval.ai/web/challenges/challenge-page/503/leaderboard/1347)**
 
-We also finetune a RoBERTa-large-mnli by ourselves. The finetuning code is in the `finetune.py`.
+We also finetune a RoBERTa-large-mnli by ourselves. The finetuning code and hyperparameters are referred from the Huggingface (https://github.com/huggingface/transformers/tree/master/examples/pytorch/text-classification).
 
 The files under the MNLI can be downloaded from [here](https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sharing), which are organized from the original MNLI website.
 
