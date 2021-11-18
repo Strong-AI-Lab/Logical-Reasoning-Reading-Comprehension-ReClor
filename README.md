@@ -42,7 +42,7 @@ The test predication results `test_preds.npy` submitted to the leaderboard and m
 
 2. `cd transformers` and then `pip install -e .`
 
-3. `cd ./examples/pytorch/text-classification/` and then run the script as the `README.md` shown.
+3. `cd ./examples/pytorch/text-classification/` and then run the script as the `README.md` shown. You only need to change the `TASK_NAME` to `mnli` like the following shown.
 ```
 export TASK_NAME=mnli
 
