@@ -13,8 +13,6 @@ Here is the link for the ReClor leaderboard. We are the team `qbao775`. The meth
 
 We also finetune a RoBERTa-large-mnli by ourselves. The finetuning code and hyperparameters are referred from the Huggingface (https://github.com/huggingface/transformers/tree/master/examples/pytorch/text-classification). You need to clone the transformers code (https://github.com/huggingface/transformers) firstly.
 
-The files under the MNLI can be downloaded from [here](https://drive.google.com/drive/folders/159eVK6IsKRvzJPwdawJphnfMBr9MtDtO?usp=sharing), which are organized from the original MNLI website.
-
 **[MNLI Project page](https://www.nyu.edu/projects/bowman/multinli/)**
 
 ##  How to run the code?
@@ -42,7 +40,7 @@ The test predication results `test_preds.npy` submitted to the leaderboard and m
 
 2. `cd transformers` and then `pip install -e .`
 
-3. `cd ./examples/pytorch/text-classification/` and then run the script as the `README.md` shown. You only need to change the `TASK_NAME` to `mnli` like the following shown.
+3. `cd ./examples/pytorch/text-classification/` and then run the script as the `README.md` shown. You only need to change the `TASK_NAME` to `mnli` like the following shown. The script will help you download and load the mnli dataset automatically.
 ```
 export TASK_NAME=mnli
 
